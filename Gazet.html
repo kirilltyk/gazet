@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Газетный сайт</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+        .main-content {
+            width: 70%;
+            margin-right: 20px;
+        }
+        .sidebar {
+            width: 30%;
+            background-color: #eee;
+            padding: 10px;
+        }
+        .article {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .article h2 {
+            font-size: 1.8em;
+            color: #333;
+        }
+        .article p {
+            font-size: 1.1em;
+            color: #555;
+        }
+        .sidebar h3 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .article img {
+            width: 100%;
+            height: auto;
+        }
+        /* Стиль для кнопки раскрытия текста */
+        .read-more {
+            color: #007BFF;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Газета Онлайн</h1>
+    <p>Последние новости и события</p>
+</header>
+
+<div class="container">
+    <div class="main-content">
+        <div class="article">
+            <h2>Заголовок статьи 1</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Изображение статьи">
+            <p id="article1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat eros vitae lorem volutpat, non aliquet nunc feugiat. Phasellus in risus ultricies, hendrerit eros vel, tempus erat. <span id="dots1">...</span><span id="more1" style="display:none;">Phasellus vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse et urna eu ligula ullamcorper sollicitudin.</span></p>
+            <span class="read-more" onclick="toggleText('1')">Читать далее...</span>
+        </div>
+
+        <div class="article">
+            <h2>Заголовок статьи 2</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Изображение статьи">
+            <p id="article2">Suspendisse euismod risus in massa volutpat, in tincidunt justo iaculis. Integer ac orci eget dui feugiat ullamcorper. Mauris ac sapien et urna tincidunt lacinia. <span id="dots2">...</span><span id="more2" style="display:none;">Curabitur sit amet dui eu purus gravida tincidunt ac nec felis. Vivamus vehicula sit amet felis at efficitur. Proin ac leo ipsum.</span></p>
+            <span class="read-more" onclick="toggleText('2')">Читать далее...</span>
+        </div>
+
+        <div class="article">
+            <h2>Заголовок статьи 3</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Изображение статьи">
+            <p id="article3">Curabitur sit amet dui eu purus gravida tincidunt ac nec felis. Vivamus vehicula sit amet felis at efficitur. Proin ac leo ipsum. Etiam sit amet leo purus. <span id="dots3">...</span><span id="more3" style="display:none;">Donec suscipit, nulla a tincidunt faucibus, ligula magna tincidunt libero, et ultricies velit nunc a arcu. Phasellus bibendum metus vitae eros auctor, ac tincidunt libero blandit.</span></p>
+            <span class="read-more" onclick="toggleText('3')">Читать далее...</span>
+        </div>
+
+        <div class="article">
+            <h2>Заголовок статьи 4</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Изображение статьи">
+            <p id="article4">Curabitur sit amet dui eu purus gravida tincidunt ac nec felis. Vivamus vehicula sit amet felis at efficitur. Proin ac leo ipsum. Etiam sit amet leo purus. <span id="dots4">...</span><span id="more4" style="display:none;">Donec suscipit, nulla a tincidunt faucibus, ligula magna tincidunt libero, et ultricies velit nunc a arcu. Phasellus bibendum metus vitae eros auctor, ac tincidunt libero blandit.</span></p>
+            <span class="read-more" onclick="toggleText('4')">Читать далее...</span>
+        </div>
+
+        <div class="article">
+            <h2>Заголовок статьи 5</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Изображение статьи">
+            <p id="article5">Curabitur sit amet dui eu purus gravida tincidunt ac nec felis. Vivamus vehicula sit amet felis at efficitur. Proin ac leo ipsum. Etiam sit amet leo purus. <span id="dots5">...</span><span id="more5" style="display:none;">Donec suscipit, nulla a tincidunt faucibus, ligula magna tincidunt libero, et ultricies velit nunc a arcu. Phasellus bibendum metus vitae eros auctor, ac tincidunt libero blandit.</span></p>
+            <span class="read-more" onclick="toggleText('5')">Читать далее...</span>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <h3>Популярные статьи</h3>
+        <ul>
+            <li><a href="#">Заголовок популярной статьи 1</a></li>
+            <li><a href="#">Заголовок популярной статьи 2</a></li>
+            <li><a href="#">Заголовок популярной статьи 3</a></li>
+            <li><a href="#">Заголовок популярной статьи 4</a></li>
+            <li><a href="#">Заголовок популярной статьи 5</a></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Газета Онлайн | <a href="#">Политика конфиденциальности</a></p>
+</footer>
+
+<script>
+    // Функция для отображения/скрытия текста в статье
+    function toggleText(articleNum) {
+        var dots = document.getElementById('dots' + articleNum);
+        var moreText = document.getElementById('more' + articleNum);
+        var btnText = document.getElementsByClassName('read-more')[articleNum - 1];
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            moreText.style.display = "none";
+            btnText.textContent = "Читать далее...";
+        } else {
+            dots.style.display = "none";
+            moreText.style.display = "inline";
+            btnText.textContent = "Скрыть текст";
+        }
+    }
+</script>
+
+</body>
+</html>
